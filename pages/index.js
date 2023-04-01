@@ -26,6 +26,10 @@ export default function Blog ({ postsToShow, page, showNext }) {
 
   return (
     <Container title={title} description={description}>
+      <h1 className="font-bold text-3xl text-black dark:text-white mb-6">FRIWP.ORG</h1>
+      <div className="md:block leading-8 mb-8 text-gray-700 dark:text-gray-300">
+        <p>Berikan Hak Menentukan Nasib Sendiri bagi Bangsa West Papua #FreeWestPapua #BebaskanTapolPapua #PapuanLivesMatter</p>
+      </div>
       {postsToShow.map(post => (
         <BlogPost key={post.id} post={post} />
       ))}
