@@ -9,7 +9,7 @@ const NavBar = () => {
   const BLOG = useConfig()
   const locale = useLocale()
   const links = [
-    { id: 0, name: 'Artikel', to: BLOG.path || '/tag/Artikel', show: true },
+    { id: 0, name: 'Home', to: BLOG.path || '/', show: true },
     { id: 1, name: 'Sikap', to: BLOG.path || '/tag/Sikap', show: true },
     { id: 2, name: 'Kegiatan', to: BLOG.path || '/tag/Kegiatan', show: true },
     { id: 3, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
@@ -93,15 +93,6 @@ export default function Header ({ navBarTitle, fullWidth }) {
         ref={navRef}
         onClick={handleClickHeader}
       >
-        <svg
-          viewBox="0 0 24 24"
-          className="caret w-6 h-6 absolute inset-x-0 bottom-0 mx-auto pointer-events-none opacity-30 group-hover:opacity-100 transition duration-100"
-        >
-          <path
-            d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z"
-            className="fill-black dark:fill-white"
-          />
-        </svg>
         <div className="flex items-center">
           <Link href="/" aria-label={BLOG.title}>
             <Image
